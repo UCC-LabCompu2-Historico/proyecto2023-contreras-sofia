@@ -7,39 +7,119 @@
     <meta name="Descripcion" content="Esta página web proporciona información sobre el índice de masa corporal y cómo calcularlo">
     <meta name="keywords" content="índice de masa corporal, cálculo, salud, peso">
     <link rel="stylesheet" href="estilo.css">
+    <link rel="icon" href="imagenes/logoimc.ico">
 </head>
 <body>
 <header>
-    <img src="imagenes/imclogo.png">
+    <img src="imagenes/parte%20arriba.png" alt="Icono del Indice de Masa Corporal">
     <h1>Índice de Masa Corporal</h1>
 </header>
 
 <nav>
     <ul>
-        <li><a href="#que-es">¿Qué es el índice de masa corporal?</a></li>
-        <li><a href="#como-se-calcula">¿Cómo se calcula el índice de masa corporal?</a></li>
-        <li><a href="#interpretacion">Interpretación del índice de masa corporal</a></li>
-        <li><a href="#calculo">Calculadora de índice de masa corporal</a></li>
+        <li>
+            <p>
+                <a href="#que-es">¿Qué es el índice de masa corporal?</a>
+            </p>
+        </li>
+        <li>
+            <p>
+                <a href="#como-se-calcula">¿Cómo se calcula el índice de masa corporal?</a></li>
+            </p>
+        <li>
+            <p>
+                <a href="#interpretacion">Interpretación del índice de masa corporal</a>
+            </p>
+        </li>
+        <li>
+            <p>
+                <a href="#caclculo">Calculquemos tu índice de masa corporal</a>
+            </p>
+        </li>
     </ul>
 </nav>
 
 <main>
-    <section id="que-es">
-        <h2>¿Qué es el índice de masa corporal?</h2>
-        <p>El índice de masa corporal (IMC) es una medida que se utiliza para determinar si una persona tiene un peso saludable en función de su altura. El IMC se calcula dividiendo el peso de una persona en kilogramos por el cuadrado de su altura en metros. Un IMC saludable está entre 18,5 y 24,9.</p>
-    </section>
+    <div id="que-es">
+        <h2>
+            ¿Qué es el índice de masa corporal?
+        </h2>
+        <p>
+            El índice de masa corporal (IMC) es una medida que se utiliza para determinar si una persona tiene un peso saludable en función de su altura. El IMC se calcula dividiendo el peso de una persona en kilogramos por el cuadrado de su altura en metros. Un IMC saludable está entre 18,5 y 24,9.
+        </p>
+    </div>
 
-    <section id="como-se-calcula">
+    <div id="como-se-calcula">
         <h2>¿Cómo se calcula el índice de masa corporal?</h2>
         <p>Para calcular el IMC, simplemente divide tu peso en kilogramos por el cuadrado de tu altura en metros. La fórmula es:</p>
         <p>IMC = peso (kg) / altura² (m²)</p>
         <p>Por ejemplo, si pesas 70 kilos y mides 1,75 metros de altura, tu IMC sería:</p>
         <p>IMC = 70 / (1,75 x 1,75) = 22,9</p>
-    </section>
+        <img src="imagenes/calculoimc1.jpg" alt="Formula para sacar el IMCim">
+    </div>
 
-    <section id="interpretacion">
+    <div id="interpretacion">
         <h2>Interpretación del índice de masa corporal</h2>
-        <p>El IMC se utiliza como una guía general para determinar si alguien tiene un peso saludable en función de su altura. Sin embargo, hay algunas limitaciones en su uso. Por ejemplo, el IMC no tiene en cuenta la cantidad de masa muscular de una persona. Alguien que tiene mucha masa muscular puede tener un IMC alto, pero no necesariamente tener sobrepeso
+        <p>
+            El IMC se utiliza como una guía general para determinar si alguien tiene un peso saludable en función de su altura. Sin embargo, hay algunas limitaciones en su uso. Por ejemplo, el IMC no tiene en cuenta la cantidad de masa muscular de una persona. Alguien que tiene mucha masa muscular puede tener un IMC alto, pero no necesariamente tener sobrepeso
+        </p>
+    </div>
+
+    <div id="calculo">
+        <h2>Calculadora de IMC</h2>
+        <label for="peso">Peso (en kg):</label>
+        <input type="number" id="peso" name="peso"><br>
+
+        <label for="altura">Altura (en m):</label>
+        <input type="number" id="altura" name="altura"><br>
+
+        <button onclick="calcularIMC()">Calcular</button><br>
+
+        <label for="resultado">Tu IMC es:</label>
+        <input type="text" id="resultado" name="resultado" readonly>
+    </div>
+
+    <p id="mensaje"></p>
+    <script>
+        function calcularIMC() {
+            var peso = document.getElementById("peso").value;
+            var altura = document.getElementById("altura").value;
+
+            // Verificar si los campos de entrada están vacíos
+            if (peso == "" || altura == "") {
+                alert("Por favor, ingrese su peso y altura correctamente.");
+                return;
+            }
+
+            // Calcular el IMC
+            var imc = peso / (altura * altura);
+
+            // Mostrar el resultado en el campo correspondiente
+            document.getElementById("resultado").value = imc.toFixed(2);
+
+            var mensaje;
+            if (imc < 18.5) {
+                mensaje = "Bajo peso";
+            } else if (imc >= 18.5 && imc < 25) {
+                mensaje = "Peso saludable";
+            } else if (imc >= 25 && imc < 30) {
+                mensaje = "Sobrepeso";
+            } else {
+                mensaje = "Obesidad";
+            }
+            document.getElementById("mensaje").textContent = mensaje;
+        }
+    </script>
+
+    <a href="https://www.cdc.gov/healthyweight/assessing/bmi/index.html">Más información sobre el IMC</a>
+
+
+    <canvas id="myCanvas">
+        Tu navegador no soporta la etiqueta canvas de HTML5
+    </canvas>
+
+
+</main>
 
 
 
