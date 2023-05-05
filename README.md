@@ -1,17 +1,18 @@
 # INDICE DE MASA CORPORAL (IMC)
 Esta pagina trata sobre el Indice de Masa Corporal y ademas conta con su calculadora de IMC.
 
-##Autores
+## Autores
 * Sofia Contreras
-## Requisitos del Primer Parcial
 
-##Tecnologias usadas
+## Tecnologias usadas
 
 * HTML5
 * CSS
 * JavaScript
 
 (Falta gh-pages)
+
+## Requisitos del Primer Parcial
 
 ### Sobre el Repositorio
 - [ x] El proyecto debe estar subido al repositorio adecuado "Proyecto2023-ApellidoAlumno1-ApellidoAlumno2"
