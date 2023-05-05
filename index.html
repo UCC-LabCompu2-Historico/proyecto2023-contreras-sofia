@@ -1,45 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Indece de Masa Corporal (IMC) Calculadora</title>
-    <meta name="Autor:" content="Sofia Conteras">
-    <meta name="Descripcion" content="Esta página web proporciona información sobre el índice de masa corporal y cómo calcularlo">
-    <meta name="keywords" content="índice de masa corporal, cálculo, salud, peso">
-    <link rel="stylesheet" href="estilo.css">
-    <link rel="icon" href="imagenes/logoimc.ico">
-</head>
-<body>
-<header>
-    <img src="imagenes/parte%20arriba.png" alt="Icono del Indice de Masa Corporal">
-    <h1>Índice de Masa Corporal</h1>
-</header>
 
-<nav>
-    <ul>
-        <li>
-            <p>
-                <a href="#que-es">¿Qué es el índice de masa corporal?</a>
-            </p>
-        </li>
-        <li>
-            <p>
-                <a href="#como-se-calcula">¿Cómo se calcula el índice de masa corporal?</a></li>
-            </p>
-        <li>
-            <p>
-                <a href="#interpretacion">Interpretación del índice de masa corporal</a>
-            </p>
-        </li>
-        <li>
-            <p>
-                <a href="#caclculo">Calculquemos tu índice de masa corporal</a>
-            </p>
-        </li>
-    </ul>
-</nav>
-
-<main>
     <div id="que-es">
         <h2>
             ¿Qué es el índice de masa corporal?
@@ -63,6 +22,8 @@
         <p>
             El IMC se utiliza como una guía general para determinar si alguien tiene un peso saludable en función de su altura. Sin embargo, hay algunas limitaciones en su uso. Por ejemplo, el IMC no tiene en cuenta la cantidad de masa muscular de una persona. Alguien que tiene mucha masa muscular puede tener un IMC alto, pero no necesariamente tener sobrepeso
         </p>
+        <img src="imagenes/balanza.jpg" alt="Se muestra una manzana con una balanza refiriendose al peso">
+
     </div>
 
     <div id="calculo">
@@ -78,6 +39,11 @@
         <label for="resultado">Tu IMC es:</label>
         <input type="text" id="resultado" name="resultado" readonly>
     </div>
+
+    <div class="video">
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/6bWUl6tRZiQ" frameborder="0" allowfullscreen></iframe>
+    </div>
+
 
     <p id="mensaje"></p>
     <script>
@@ -117,8 +83,6 @@
     <canvas id="myCanvas">
         Tu navegador no soporta la etiqueta canvas de HTML5
     </canvas>
-
-
 </main>
 
 
