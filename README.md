@@ -1,13 +1,23 @@
-# proyecto2023
-Estructura de Proyecto Lab de Compu II - 2023
+# INDICE DE MASA CORPORAL (IMC)
+Esta pagina trata sobre el Indice de Masa Corporal y ademas conta con su calculadora de IMC.
 
+##Autores
+* Sofia Contreras
 ## Requisitos del Primer Parcial
+
+##Tecnologias usadas
+
+* HTML5
+* CSS
+* JavaScript
+
+(Falta gh-pages)
 
 ### Sobre el Repositorio
 - [ x] El proyecto debe estar subido al repositorio adecuado "Proyecto2023-ApellidoAlumno1-ApellidoAlumno2"
-- [ ] Modificar el Readme.MD y colocar información del proyecto/página (mínimamente: título del proyecto, autores con nombre y apellido, link de gh-pages, contenido de la página,  listado de tecnologías usadas, etc)
+- [ x] Modificar el Readme.MD y colocar información del proyecto/página (mínimamente: título del proyecto, autores con nombre y apellido, link de gh-pages, contenido de la página,  listado de tecnologías usadas, etc)
 - [ x] La estructura del proyecto debe ser adecuada (crear una carpeta para las imágenes, otra para los sketch/mockups/Wireframes). Es importante que contenga SKETCH y MOCKUP/WIREFRAME (debe estar en formato: PDF, PNG o JPG).
-- [ ] El código debe estar pusheado en el repositorio (emplear gh-pages ó publicar la página desde el main), y no debe haber diferencias entre **main** y **gh-pages** (verificar de realizar el Merge).
+- [ x] El código debe estar pusheado en el repositorio (emplear gh-pages ó publicar la página desde el main), y no debe haber diferencias entre **main** y **gh-pages** (verificar de realizar el Merge).
 - [ ] Publicar la Web empleando GitHubPages
 - [ x] El repositorio no debe contener archivos innecesarios (no debe contener .idea o .vsc, en todo caso emplear **.gitignore**)
 
