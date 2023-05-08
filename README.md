@@ -10,7 +10,9 @@ Esta pagina trata sobre el Indice de Masa Corporal y ademas conta con su calcula
 * CSS
 * JavaScript
 
-(Falta gh-pages)
+## Pagina Web
+
+Link del sitio: [Proyecto de Laboratorio de Computacion 2](https://ucc-labcompu2.github.io/proyecto2023-contreras-sofia/)
 
 ## Requisitos del Primer Parcial
 
@@ -19,13 +21,13 @@ Esta pagina trata sobre el Indice de Masa Corporal y ademas conta con su calcula
 - [ x] Modificar el Readme.MD y colocar información del proyecto/página (mínimamente: título del proyecto, autores con nombre y apellido, link de gh-pages, contenido de la página,  listado de tecnologías usadas, etc)
 - [ x] La estructura del proyecto debe ser adecuada (crear una carpeta para las imágenes, otra para los sketch/mockups/Wireframes). Es importante que contenga SKETCH y MOCKUP/WIREFRAME (debe estar en formato: PDF, PNG o JPG).
 - [ x] El código debe estar pusheado en el repositorio (emplear gh-pages ó publicar la página desde el main), y no debe haber diferencias entre **main** y **gh-pages** (verificar de realizar el Merge).
-- [ ] Publicar la Web empleando GitHubPages
+- [ x] Publicar la Web empleando GitHubPages
 - [ x] El repositorio no debe contener archivos innecesarios (no debe contener .idea o .vsc, en todo caso emplear **.gitignore**)
 
 ### Sobre el Proyecto General
 - [ x] La página principal debe llamarse index
-- [ ] Identar correctamente el código (en Webstorm Ctrl+Alt+L)
-- [ ] No debe haber errores presentes (realizar *Code* > *Inspect Code* para verificar que no haya errores)
+- [ x] Identar correctamente el código (en Webstorm Ctrl+Alt+L)
+- [ x] No debe haber errores presentes (realizar *Code* > *Inspect Code* para verificar que no haya errores)
 - [x ] Se debe emplear algún favicon
 - [ x] Emplear alguna fuente de google fonts o subir al proyecto alguna fuente externa
 - [ x] Debe haber navegación entre todas las páginas
