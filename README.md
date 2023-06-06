@@ -8,6 +8,7 @@ Esta pagina trata sobre el Indice de Masa Corporal y además conta con su calcul
 
 * HTML5
 * CSS
+* JAVASCRIPT
 
 ## Página Web
 
