@@ -3,16 +3,17 @@
 
 <head>
   <meta charset="UTF-8">
-  <title>Indece de Masa Corporal (IMC) Calculadora</title>
-  <meta name="Autor:" content="Sofia Conteras">
-  <meta name="Descripcion"
-        content="Esta página web proporciona información sobre el índice de masa corporal y cómo calcularlo">
+  <title>Índice de Masa Corporal (IMC) Calculadora</title>
+  <meta name="Autor" content="Sofia Contreras">
+  <meta name="Descripcion" content="Esta página web proporciona información sobre el índice de masa corporal y cómo calcularlo">
   <meta name="keywords" content="índice de masa corporal, cálculo, salud, peso">
   <link rel="stylesheet" href="estilo.css">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@700&display=swap" rel="stylesheet">
   <link rel="icon" href="imagenes/logoimc.ico">
+  <script src="script.js"></script>
 </head>
-<body>
 
+<body>
 <div id="calculo">
   <h2>Calculadora de IMC</h2>
   <label for="peso">Peso (en kg):</label>
@@ -24,45 +25,19 @@
   <button onclick="calcularIMC()">Calcular</button>
   <br>
 
+  <label for="resultado">Tu IMC es:</label>
+  <input type="text" id="resultado" name="resultado" readonly>
+  <p id="mensaje"></p>
+
+  <canvas id="grafico" width="200" height="20"></canvas>
+  <br>
+
   <a href="index.html">
     <button>Volver al inicio</button>
   </a>
 
-  <label for="resultado">Tu IMC es:</label>
-  <input type="text" id="resultado" name="resultado" readonly>
 </div>
 
-<p id="mensaje"></p>
-<script>
-  function calcularIMC() {
-    let peso = document.getElementById("peso").value;
-    let altura = document.getElementById("altura").value;
-
-    // Verificar si los campos de entrada están vacíos
-    if (peso === "" || altura === "") {
-      alert("Por favor, ingrese su peso y altura correctamente.");
-      return;
-    }
-
-    // Calcular el IMC
-    let imc = peso / (altura * altura);
-
-    // Mostrar el resultado en el campo correspondiente
-    document.getElementById("resultado").value = imc.toFixed(2);
-
-    let mensaje;
-    if (imc < 18.5) {
-      mensaje = "Bajo peso";
-    } else if (imc >= 18.5 && imc < 25) {
-      mensaje = "Peso saludable";
-    } else if (imc >= 25 && imc < 30) {
-      mensaje = "Sobrepeso";
-    } else {
-      mensaje = "Obesidad";
-    }
-    document.getElementById("mensaje").textContent = mensaje;
-  }
-</script>
-
 </body>
+
 </html>
