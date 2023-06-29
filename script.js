@@ -116,3 +116,6 @@ function dibujarGraficoIMC(imc, color) {
 
     draw();
 }
+
+
+
