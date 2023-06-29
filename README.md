@@ -1,5 +1,5 @@
 # ÍNDICE DE MASA CORPORAL (IMC)
-Esta pagina trata sobre el Indice de Masa Corporal y además conta con su calculadora de IMC.
+Esta página trata sobre el Índice de Masa Corporal y además conta con su calculadora de IMC.
 
 ## Autores
 * Sofia Contreras
