@@ -1,5 +1,6 @@
 /**
  * Comprueba si los valores ingresados son correctos y realiza el cálculo del IMC.
+ * @method calcularIMC
  */
 function calcularIMC() {
     let peso = document.getElementById("peso").value;
@@ -15,9 +16,16 @@ function calcularIMC() {
     peso = parseFloat(peso);
     altura = parseFloat(altura);
 
-    if (isNaN(peso) || isNaN(altura) || peso < 0 || altura < 0) {
+    if (isNaN(peso) || isNaN(altura) || peso < 0 || altura < 0 || altura > 2.72) {
         alert("Por favor, ingrese valores numéricos válidos para el peso y la altura.");
         document.getElementById("peso").value = "";
+        document.getElementById("altura").value = "";
+        return;
+    }
+
+    // Validar longitud de altura y formato decimal
+    if (altura.toString().length > 4 || altura.toString().split('.').length > 2) {
+        alert("Por favor, ingrese una altura válida en el formato adecuado, por ejemplo: 1.54");
         document.getElementById("altura").value = "";
         return;
     }
@@ -34,6 +42,7 @@ function calcularIMC() {
 
 /**
  * Retorna el mensaje correspondiente según el IMC.
+ * @method obtenerMensajeIMC
  * @param {number} imc - Índice de masa corporal.
  * @returns {string} - Mensaje correspondiente al IMC.
  */
@@ -51,6 +60,7 @@ function obtenerMensajeIMC(imc) {
 
 /**
  * Retorna el color correspondiente según el IMC.
+ * @method obtenerColorIMC
  * @param {number} imc - Índice de masa corporal.
  * @returns {string} - Color correspondiente al IMC.
  */
@@ -68,6 +78,7 @@ function obtenerColorIMC(imc) {
 
 /**
  * Dibuja la barra de progreso del IMC en el canvas.
+ * @method dibujarGraficoIMC
  * @param {number} imc - Índice de masa corporal.
  * @param {string} color - Color de la barra de progreso.
  */
@@ -75,10 +86,14 @@ function dibujarGraficoIMC(imc, color) {
     const canvas = document.getElementById("grafico");
     const ctx = canvas.getContext("2d");
 
-    const targetWidth = canvas.width * (imc / 40);
-    const barHeight = canvas.height;
+    const targetWidth = (canvas.width - 2) * (imc / 40); // Ajustamos el ancho objetivo restando 2 para tener en cuenta el grosor de los bordes
+    const barHeight = canvas.height - 2; // Ajustamos la altura de la barra restando 2 para tener en cuenta el grosor de los bordes
 
     ctx.clearRect(0, 0, canvas.width, canvas.height);
+    ctx.fillStyle = "#f5f5f5"; // Establecemos un color de fondo
+
+    ctx.fillRect(1, 1, canvas.width - 2, barHeight); // Dibujamos un rectángulo de fondo
+
     ctx.fillStyle = color;
 
     let currentWidth = 0;
@@ -89,9 +104,9 @@ function dibujarGraficoIMC(imc, color) {
         if (currentWidth < targetWidth) {
             currentWidth += 1; // Ajusta la velocidad de progreso de la barra cambiando el valor de incremento
 
-            ctx.fillRect(0, 0, currentWidth, barHeight);
+            ctx.fillRect(1, 1, currentWidth, barHeight); // Dibujamos la barra de progreso
         } else {
-            ctx.fillRect(0, 0, targetWidth, barHeight);
+            ctx.fillRect(1, 1, targetWidth, barHeight); // Dibujamos la barra de progreso completa
         }
 
         if (currentWidth < targetWidth) {
