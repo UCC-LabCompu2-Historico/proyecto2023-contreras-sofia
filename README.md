@@ -12,7 +12,7 @@ Esta página trata sobre el Índice de Masa Corporal y además conta con su calc
 
 ## Página Web
 
-Link del sitio: [Proyecto de Laboratorio de Computacion 2](https://ucc-labcompu2.github.io/proyecto2023-contreras-sofia/)
+Link del sitio: [Proyecto de Laboratorio de Computacion 2](https://ucc-labcompu2-historico.github.io/proyecto2023-contreras-sofia/)
 
 ## Requisitos del Primer Parcial
 
